@@ -1,0 +1,28 @@
+{
+  "name": "clinicxflow",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "tsc --noEmit -p tsconfig.check.json",
+    "test": "node scripts/test-assistant.cjs && node scripts/test-login.cjs && node scripts/test-booking-db.cjs",
+    "check": "npm run lint && npm run test && npm run build"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "^2.116.0",
+    "next": "15.5.25",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "recharts": "^2.13.3"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,24 @@
+﻿.section { padding: 2rem 0 3.25rem; background: #f7f9fb; color: #163553; }
+.grid { display: grid; grid-template-columns: 3fr 2fr; gap: 1.875rem; align-items: stretch; }
+.form { min-width: 0; padding: 1.875rem; border: 1px solid #c8d5e5; border-radius: 10px; background: #fff; }
+.heading { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2rem; }
+.icon { display: grid; place-items: center; flex: 0 0 60px; width: 60px; height: 60px; border-radius: 50%; background: #e4f9db; color: #337f26; }
+.icon svg { width: 32px; height: 32px; }
+.heading h2 { margin: 0 0 0.25rem; color: #102c48; font-size: clamp(1.3rem, 2vw, 1.6rem); font-weight: 500; line-height: 1.25; }
+.heading p { margin: 0; color: #4b6480; font-size: 1rem; line-height: 1.5; }
+.field { display: grid; gap: 0.5rem; margin-bottom: 1.875rem; }
+.field label { font-size: 1rem; }
+.field input { width: 100%; min-width: 0; height: 60px; padding: 0 1.25rem; border: 1px solid #c8d5e5; border-radius: 10px; background: #fff; color: #163553; font: inherit; font-size: 1.125rem; }
+.field input::placeholder { color: #6a8099; opacity: 1; }
+.field input:focus-visible, .submit:focus-visible { outline: 3px solid #148854; outline-offset: 3px; }
+.consent { margin: 0 0 1rem; font-size: 1.0625rem; line-height: 1.6; }
+.submit { width: 100%; min-height: 60px; border: 0; border-radius: 10px; background: #0c8d59; color: white; font: inherit; font-size: 1.25rem; cursor: pointer; }
+.submit:hover:not(:disabled) { background: #096b44; }
+.submit:disabled { background: #f0f4f8; color: #8c9fb8; cursor: not-allowed; }
+.message { margin: 1rem 0 0; font-size: 0.95rem; line-height: 1.5; }
+.message:empty { display: none; }
+.portrait { min-height: 480px; overflow: hidden; border-radius: 30px; background: #6fbd9f; }
+.portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 65% center; }
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } .portrait { min-height: 0; height: 350px; } .portrait img { object-position: center 40%; } }
+@media (max-width: 480px) { .form { padding: 1.25rem; } .heading { gap: 0.8rem; align-items: flex-start; } .icon { flex-basis: 46px; width: 46px; height: 46px; } .icon svg { width: 26px; height: 26px; } .field input { font-size: 1rem; } }
+

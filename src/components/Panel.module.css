@@ -1,0 +1,5 @@
+.panel { padding: 1.3rem; border-radius: var(--cx-radius); margin-bottom: 1.4rem; }
+.head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.head h2 { font-size: 1.05rem; margin: 0; color: var(--cx-teal-900); }
+.head p { margin: 0; font-size: 0.85rem; color: var(--cx-muted); }
+.scroll { overflow-x: auto; }

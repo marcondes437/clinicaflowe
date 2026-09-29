@@ -1,0 +1,57 @@
+.doctorPage { --portal-photo: url('/fotos/carrossel/pexels-5452269.jpg'); }
+.page { min-height: 100dvh; background: #030b0e; color: #fff; }
+.header { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; min-height: 88px; padding: 12px clamp(24px, 4vw, 76px); border-top: 4px solid #342647; background: #fff; color: #03465b; }
+.brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; color: #009cab; }
+.brand img { width: 58px; height: 58px; object-fit: contain; }
+.brand > span { font-size: 25px; font-weight: 800; letter-spacing: -0.8px; }
+.brand small { display: block; margin-top: 3px; font-size: 9px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: clamp(18px, 2vw, 38px); }
+.nav a { padding-block: 12px; font-size: 14px; white-space: nowrap; }
+.nav a:hover { color: #008f9a; text-decoration: underline; text-underline-offset: 6px; }
+.main { position: relative; isolation: isolate; display: flex; flex-direction: column; min-height: calc(100dvh - 88px); overflow: hidden; }
+.photograph { position: absolute; z-index: -1; inset: 0 29% 0 0; background: linear-gradient(180deg, rgb(0 103 115 / 22%), rgb(0 47 57 / 15%) 45%, #030b0e 94%), linear-gradient(90deg, rgb(0 60 69 / 22%), transparent 45%, #030b0e 100%), var(--portal-photo, url('/fotos/portal-familia.jpg')) center 40% / cover no-repeat; }
+.content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(380px, 480px); align-items: center; gap: clamp(32px, 5vw, 90px); width: min(1600px, 100% - 8vw); margin-inline: auto; padding-block: clamp(70px, 13vh, 150px) 90px; flex: 1; }
+.welcome { justify-self: end; align-self: end; padding-bottom: 12px; text-align: right; text-shadow: 0 2px 22px rgb(0 0 0 / 45%); }
+.eyebrow { display: block; margin-bottom: 16px; font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
+.welcome h1 { margin: 0; color: #fff; font-size: clamp(68px, 6.5vw, 112px); font-weight: 800; line-height: 1; letter-spacing: -4px; }
+.welcome p { margin: 10px 0 18px; font-size: clamp(20px, 2vw, 28px); font-weight: 300; }
+.caption { font-size: 14px; color: #d5e7e9; }
+.access { width: 100%; }
+.card { padding: 28px 24px 26px; border: 1px solid #c49459; border-radius: 14px; background: #fff; color: #03465b; box-shadow: 0 18px 50px rgb(0 0 0 / 18%); }
+.card h2 { margin: 0; color: #ae763c; font-size: 20px; font-weight: 650; text-align: center; letter-spacing: 0; }
+.intro { margin: 9px 0 28px; color: #64757d; font-size: 13px; text-align: center; }
+.card form { gap: 10px; }
+.card form label { color: #03465b; font-size: 14px; font-weight: 500; }
+.card form input { min-height: 46px; padding: 12px 15px; border: 1.5px solid #00a8b8; border-radius: 9px; font: inherit; font-size: 16px; }
+.card form input::placeholder { color: #8b96a1; }
+.card form input:focus { border-color: #007d8c; box-shadow: 0 0 0 3px rgb(0 168 184 / 15%); }
+.card form a { color: #035c70; font-size: 12px; font-weight: 500; }
+.card form button { min-height: 44px; margin-top: 16px; padding: 11px 20px; border-radius: 999px; background: #003e50; font-size: 14px; font-weight: 500; text-transform: uppercase; }
+.card form button:hover { background: #006477; }
+.register { display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 18px; padding: 10px 20px; border: 1.5px solid #fff; border-radius: 999px; color: #fff; font-size: 14px; text-transform: uppercase; }
+.register:hover { background: #fff; color: #03465b; }
+.back { display: block; width: fit-content; margin: 18px auto 0; color: #d0dce0; font-size: 12px; }
+.back:hover { color: #fff; text-decoration: underline; }
+.page a:focus-visible { outline: 3px solid #00b4c4; outline-offset: 5px; }
+.footer { padding: 24px 20px 90px; color: #bbc9d0; font-size: 12px; text-align: center; }
+@media (min-width: 1650px) { .content { grid-template-columns: minmax(0, 1fr) 520px; } .nav a { font-size: 16px; } }
+@media (max-width: 1200px) {
+  .header { flex-wrap: wrap; justify-content: center; gap: 4px; padding: 12px 24px; }
+  .nav { justify-content: center; flex-wrap: wrap; column-gap: 24px; }
+  .main { min-height: calc(100dvh - 140px); }
+  .content { gap: 32px; grid-template-columns: minmax(0, 1fr) 400px; }
+}
+@media (max-width: 800px) {
+  .header { padding-inline: 16px; }
+  .brand > span { font-size: 23px; }
+  .nav { justify-content: flex-start; flex-wrap: nowrap; width: 100%; overflow-x: auto; gap: 22px; }
+  .nav a { font-size: 13px; }
+  .photograph { inset: 0 0 auto; height: 540px; background-position: center; }
+  .content { grid-template-columns: 1fr; width: min(480px, 100% - 32px); gap: 36px; padding-block: 110px 24px; }
+  .welcome { justify-self: start; text-align: left; }
+  .welcome h1 { font-size: 64px; }
+  .welcome p { font-size: 22px; }
+  .eyebrow { font-size: 11px; }
+  .card { padding: 26px 20px; }
+  .footer { padding-bottom: 100px; }
+}

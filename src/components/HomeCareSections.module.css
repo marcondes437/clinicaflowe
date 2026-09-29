@@ -1,0 +1,52 @@
+.services, .exams { padding: clamp(2.75rem, 5vw, 5rem) 0; color: #173f49; }
+.services { background: #fff; }
+.heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; }
+.label { display: block; margin-bottom: 0.85rem; color: #706149; font-size: 0.8rem; font-weight: 600; }
+.heading h2 { margin: 0; color: #173f49; font-size: clamp(1.65rem, 2.8vw, 2.5rem); font-weight: 500; line-height: 1.2; letter-spacing: -0.035em; }
+.heading > p { max-width: 320px; margin: 0; color: #5a696c; font-size: 0.93rem; line-height: 1.7; }
+.serviceGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid #dce4e3; border-bottom: 1px solid #dce4e3; }
+.service { display: flex; flex-direction: column; min-width: 0; padding: 2rem 1.6rem; }
+.service + .service { border-left: 1px solid #dce4e3; }
+.service:first-child { padding-left: 0; }
+.service:last-child { padding-right: 0; }
+.icon { margin-bottom: 1.4rem; color: #18737a; }
+.icon svg { display: block; width: 34px; height: 34px; }
+.service h3 { margin: 0 0 0.7rem; color: #173f49; font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; }
+.service p { margin: 0 0 1.6rem; color: #5a696c; font-size: 0.9rem; line-height: 1.75; }
+.service a, .action { display: inline-flex; align-items: center; justify-content: space-between; gap: 0.7rem; min-height: 44px; color: #116770; font-size: 0.82rem; font-weight: 600; }
+.service a { margin-top: auto; }
+.service a svg, .action svg { width: 20px; height: 20px; flex-shrink: 0; }
+.service a:hover, .action:hover { color: #173f49; text-decoration: underline; text-underline-offset: 5px; }
+.services a:focus-visible, .exams a:focus-visible { outline: 2px solid #18737a; outline-offset: 5px; }
+.exams { background: #f7f6f2; scroll-margin-top: 180px; }
+.examLayout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+.checkups { padding: clamp(1.4rem, 3vw, 2.4rem); border: 1px solid #e1dfd6; background: #fffefa; scroll-margin-top: 180px; }
+.checkups > h3, .examDirectory > h3 { margin: 0 0 0.8rem; color: #173f49; font-size: 1.4rem; font-weight: 500; }
+.intro { margin: 0; color: #5a696c; font-size: 0.9rem; line-height: 1.7; }
+.checkupList { margin: 1.4rem 0 0.7rem; }
+.checkupList article { padding: 1.15rem 0; border-top: 1px solid #e1dfd6; }
+.checkupList h4 { margin: 0 0 0.4rem; color: #173f49; font-size: 1rem; font-weight: 600; }
+.checkupList p { margin: 0; color: #5a696c; font-size: 0.88rem; line-height: 1.65; }
+.action { width: fit-content; gap: 1.1rem; }
+.examDirectory { padding-top: 0.5rem; }
+.examList { margin: 1.35rem 0 0; padding: 0; list-style: none; border-top: 1px solid #d9dcd5; }
+.examList li { padding: 1.1rem 0; border-bottom: 1px solid #d9dcd5; color: #29494f; font-size: 1rem; }
+.examContact { margin-top: 1.4rem; }
+.examContact p { max-width: 430px; margin: 0 0 0.5rem; color: #5a696c; font-size: 0.88rem; line-height: 1.7; }
+@media (max-width: 1000px) {
+  .serviceGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .service:nth-child(even) { padding-right: 0; }
+  .service:nth-child(n+3) { border-top: 1px solid #dce4e3; }
+}
+@media (max-width: 640px) {
+  .heading { align-items: flex-start; flex-direction: column; gap: 1rem; margin-bottom: 1.8rem; }
+  .heading > p { max-width: none; }
+  .serviceGrid, .examLayout { grid-template-columns: minmax(0, 1fr); }
+  .service, .service + .service { padding: 1.5rem 0; border-left: 0; }
+  .service + .service { border-top: 1px solid #dce4e3; }
+  .icon { margin-bottom: 1rem; }
+  .service p { margin-bottom: 0.65rem; }
+  .service a { width: fit-content; gap: 1rem; }
+  .exams, .checkups { scroll-margin-top: 230px; }
+}

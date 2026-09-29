@@ -1,0 +1,15 @@
+.form { display: grid; gap: 1.4rem; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
+.full { grid-column: 1 / -1; }
+.field { display: grid; gap: 0.45rem; }
+.field label { color: #24464d; font-size: 0.88rem; font-weight: 700; }
+.field input { width: 100%; border: 1px solid #dfe4e6; border-radius: 0.8rem; background: #fff; color: #22353d; padding: 0.9rem 1rem; font: inherit; outline: none; }
+.field input:focus { border-color: #0b7a67; box-shadow: 0 0 0 3px rgba(11, 122, 103, 0.12); }
+.note { margin: 0; color: #6a777c; font-size: 0.86rem; line-height: 1.5; }
+.form button { border: 0; border-radius: 999px; background: #0b6673; color: #fff; cursor: pointer; font: inherit; font-weight: 800; padding: 0.95rem 1.25rem; }
+.form button:hover { background: #084f5a; }
+.form button:disabled { cursor: wait; opacity: 0.65; }
+.error, .success { border-radius: 0.7rem; padding: 0.85rem 1rem; font-size: 0.9rem; }
+.error { background: #fff0f0; color: #a33d3d; }
+.success { background: #e9f8f1; color: #176b4a; }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }

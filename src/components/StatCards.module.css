@@ -1,0 +1,5 @@
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; margin-bottom: 1.6rem; }
+.card { padding: 1.1rem 1.2rem; border-radius: var(--cx-radius); }
+.label { font-size: 0.8rem; color: var(--cx-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.value { font-size: 1.9rem; font-weight: 800; color: var(--cx-teal-900); line-height: 1.2; }
+.hint { font-size: 0.82rem; color: var(--cx-muted); }

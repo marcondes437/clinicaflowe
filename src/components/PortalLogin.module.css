@@ -1,0 +1,119 @@
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(420px, 0.82fr) 1.18fr;
+  background: #f7faf9;
+}
+
+.doctorPage { background: #f5f8fb; }
+.doctorPage .eyebrow { color: #2169a6; }
+.doctorPage .form input:focus { border-color: #2169a6; box-shadow: 0 0 0 3px rgba(33, 105, 166, 0.13); }
+.doctorPage .form button { background: #17639b; }
+.doctorPage .form button:hover { background: #104d7b; }
+.doctorPage .passwordLabel a, .doctorPage .back { color: #17639b; }
+.doctorPage .visualOverlay { background: linear-gradient(120deg, rgba(11, 48, 76, 0.88), rgba(19, 94, 132, 0.22)); }
+
+.formSide {
+  display: grid;
+  place-items: center;
+  padding: 3rem clamp(1.5rem, 5vw, 6rem);
+}
+
+.formWrap {
+  width: min(430px, 100%);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #0b5360;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.brand img { width: 2.15rem; height: 2.15rem; object-fit: contain; }
+
+.formHeader { margin: 5rem 0 2rem; }
+
+.eyebrow {
+  color: #138b8b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.formHeader h1 {
+  max-width: 12ch;
+  margin: 0.8rem 0 0.8rem;
+  color: #143d45;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+}
+
+.formHeader p, .help { color: #63767a; line-height: 1.6; }
+
+.form { display: grid; gap: 0.65rem; }
+.form label { color: #294c52; font-size: 0.9rem; font-weight: 700; }
+
+.form input {
+  width: 100%;
+  border: 1px solid #c7d8d7;
+  border-radius: 0.55rem;
+  background: #fff;
+  color: #183c42;
+  padding: 0.95rem 1rem;
+  outline: none;
+}
+
+.form input:focus { border-color: #13918e; box-shadow: 0 0 0 3px rgba(19, 145, 142, 0.13); }
+.passwordLabel { display: flex; justify-content: space-between; align-items: center; margin-top: 0.8rem; }
+.passwordLabel a, .back { color: #087b82; font-size: 0.85rem; font-weight: 700; }
+
+.form button {
+  margin-top: 1rem;
+  border: 0;
+  border-radius: 0.55rem;
+  background: #087b82;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 0.95rem 1rem;
+}
+
+.form button:hover { background: #075f68; }
+.form button:disabled { cursor: wait; opacity: 0.7; }
+.divider { display: flex; align-items: center; gap: 0.75rem; margin: 0.35rem 0 0; color: #809093; font-size: 0.78rem; }
+.divider::before, .divider::after { content: ""; height: 1px; flex: 1; background: #dce7e5; }
+.form button.googleButton { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 50px; margin-top: 0; padding: 12px 16px; border: 1px solid #cecbd0; border-radius: 11px; background: #fff; color: #111; box-shadow: 0 7px 12px rgb(0 0 0 / 12%); font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 400; line-height: 24px; text-transform: none; letter-spacing: normal; }
+.form button.googleButton:hover:not(:disabled) { background: #fafafa; }
+.form button.googleButton:focus-visible { outline: 2px solid #4285f4; outline-offset: 3px; }
+.googleIcon { display: block; width: 20px; height: 20px; flex: 0 0 20px; }
+.error { border-radius: 0.5rem; background: #fff0f0; color: #a33d3d; padding: 0.75rem; font-size: 0.9rem; }
+.success { border-radius: 0.5rem; background: #edf9f1; color: #257044; padding: 0.75rem; font-size: 0.9rem; }
+.help { margin: 1.5rem 0 0.3rem; font-size: 0.88rem; }
+.back { display: inline-block; margin-top: 0.8rem; }
+
+.visual {
+  position: relative;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.visualOverlay { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(7, 63, 72, 0.82), rgba(7, 63, 72, 0.18)); }
+.visualContent { position: absolute; left: clamp(2rem, 8vw, 8rem); bottom: clamp(3rem, 10vh, 8rem); max-width: 32rem; color: #fff; }
+.visualContent span { color: #a9e5d8; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+.visualContent h2 { margin: 0.8rem 0 0.7rem; font-size: clamp(2.3rem, 4vw, 4.8rem); line-height: 0.98; letter-spacing: -0.06em; }
+.visualContent p { max-width: 27rem; color: rgba(255,255,255,0.86); line-height: 1.6; }
+
+@media (max-width: 850px) {
+  .page { grid-template-columns: 1fr; }
+  .formSide { min-height: 100vh; padding: 2rem 1.3rem; }
+  .formHeader { margin-top: 4rem; }
+  .visual { display: none; }
+}

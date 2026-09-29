@@ -1,0 +1,3 @@
+.form { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 1rem; }
+.full { grid-column: 1 / -1; }
+.footer { grid-column: 1 / -1; display: flex; gap: 0.7rem; align-items: center; margin-top: 0.4rem; }

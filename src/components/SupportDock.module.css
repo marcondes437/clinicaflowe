@@ -1,0 +1,3 @@
+.dock { position: fixed; z-index: 45; right: 24px; bottom: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; width: 490px; max-width: calc(100vw - 32px); pointer-events: none; }
+.dock > * { pointer-events: auto; }
+@media (max-width: 540px) { .dock { right: 8px; max-width: calc(100vw - 16px); } }

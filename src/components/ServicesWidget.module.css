@@ -1,0 +1,35 @@
+.widget { position: relative; width: 100%; flex-shrink: 0; overflow: hidden; border: 1px solid #e4eaec; border-bottom: 0; border-radius: 24px 24px 0 0; background: #fff; color: #03465b; box-shadow: 0 -4px 30px rgb(0 40 55 / 12%); font-family: Arial, Helvetica, sans-serif; }
+.toggle { display: flex; align-items: center; gap: 16px; width: 100%; min-height: 72px; padding: 12px 22px; border: 0; background: #fff; color: inherit; cursor: pointer; font: inherit; font-size: 19px; font-weight: 600; text-align: left; text-transform: uppercase; }
+.toggle img { width: 44px; height: 44px; object-fit: contain; flex-shrink: 0; }
+.accent { color: #b57b3c; }
+.chevron { width: 22px; height: 22px; flex-shrink: 0; margin-left: auto; transition: transform 180ms ease; }
+.expanded { transform: rotate(180deg); }
+.panel { max-height: calc(100dvh - 180px); overflow-y: auto; overscroll-behavior: contain; padding: 24px 22px max(24px, env(safe-area-inset-bottom)); background: #f3f3f3; }
+.panel[hidden] { display: none; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.card { display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 16px; min-height: 128px; padding: 14px 11px; border-radius: 20px 20px 20px 5px; background: #fff; box-shadow: 0 4px 12px rgb(0 0 0 / 9%); font-size: 13px; line-height: 1.35; text-transform: uppercase; transition: transform 160ms ease, box-shadow 160ms ease; }
+.card svg { width: 30px; height: 30px; color: #008596; }
+.card strong { display: block; color: #a56b2e; font-weight: 750; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 7px 18px rgb(0 70 85 / 15%); }
+.toggle:hover { background: #fafcfc; }
+.toggle:focus-visible, .card:focus-visible { outline: 3px solid #008596; outline-offset: -3px; }
+.decoration { display: grid; grid-template-columns: repeat(2, 1fr); align-self: stretch; overflow: hidden; }
+.decoration i { border: 1px solid #18b2b7; border-radius: 100% 0 0; }
+.decoration i:nth-child(2) { transform: rotate(90deg); }
+.decoration i:nth-child(3) { transform: rotate(-90deg); border-color: #c18d52; }
+.decoration i:nth-child(4) { transform: rotate(180deg); }
+@media (max-width: 540px) {
+  .widget { border-radius: 20px 20px 0 0; }
+  .toggle { min-height: 64px; padding: 10px 14px; gap: 10px; font-size: clamp(13px, 3.6vw, 18px); }
+  .toggle img { width: 36px; height: 36px; }
+  .panel { padding: 18px 14px max(18px, env(safe-area-inset-bottom)); }
+  .grid { gap: 12px; }
+  .card { min-height: 120px; padding: 12px 9px; font-size: 12px; }
+}
+@media (max-width: 380px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chevron, .card { transition: none; }
+  .card:hover { transform: none; }
+}

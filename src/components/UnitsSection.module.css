@@ -1,0 +1,39 @@
+﻿.section { padding: 3.5rem 0 4rem; background: #fff; color: #193751; scroll-margin-top: 160px; }
+.container { max-width: 1080px; }
+.section h2 { margin: 0 0 1rem; font-size: 2.2rem; font-weight: 400; color: #123e70; }
+.intro { margin: 0 0 1.25rem; font-size: 0.95rem; line-height: 1.6; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; align-items: start; }
+.card { overflow: hidden; border: 1px solid #dce8fa; border-radius: 24px; background: #fff; }
+.photo { position: relative; aspect-ratio: 1.88; background: #e0edfc; }
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.photo > span { position: absolute; bottom: 10px; right: 12px; padding: 3px 8px; border-radius: 4px; background: #123e70; color: #fff; font-size: 0.65rem; }
+.body { padding: 1.3rem 1.4rem 1.2rem; }
+.body h3 { margin: 0 0 1.3rem; font-size: 1.2rem; font-weight: 500; }
+.row { display: flex; align-items: flex-start; gap: 0.75rem; margin: 0 0 0.9rem; font-size: 0.9rem; line-height: 1.55; }
+.row svg { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; color: #0065df; }
+.row a, .contacts a, .details > a { color: #0065df; text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.contacts { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-top: 1rem; font-size: 0.85rem; }
+.details { margin-top: 0.6rem; font-size: 0.9rem; }
+.details summary { display: flex; justify-content: flex-end; align-items: center; gap: 0.65rem; min-height: 44px; color: #0065df; font-weight: 600; list-style: none; cursor: pointer; }
+.details summary::-webkit-details-marker { display: none; }
+.details[open] summary { border-bottom: 1px solid #dce8fa; }
+.details p { line-height: 1.7; }
+.controls { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; }
+.arrows { display: flex; gap: 0.5rem; }
+.arrows button { width: 44px; height: 44px; border: 0; background: transparent; color: #0065df; font-size: 2.6rem; line-height: 1; cursor: pointer; }
+.arrows button:disabled { opacity: 0.35; cursor: default; }
+.dots { display: flex; flex-wrap: wrap; justify-content: flex-end; }
+.dots button { display: grid; place-items: center; width: 40px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.dots span { width: 12px; height: 12px; border: 1px solid #0065df; border-radius: 50%; }
+.dots button[aria-current] span { background: #0065df; }
+.all { display: flex; justify-content: center; margin-top: 2rem; }
+.all button { min-height: 44px; padding: 0.7rem 1rem; border: 0; border-radius: 7px; background: #0065df; color: #fff; font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
+.all button:hover { background: #004da9; }
+.section a:focus-visible, .section button:focus-visible, .details summary:focus-visible { outline: 2px solid #0065df; outline-offset: 4px; }
+@media (max-width: 680px) {
+  .section { padding-block: 2rem; scroll-margin-top: 230px; }
+  .section h2 { font-size: 1.8rem; }
+  .grid { grid-template-columns: 1fr; }
+  .body { padding: 1.2rem; }
+  .photo { aspect-ratio: 1.6; }
+}

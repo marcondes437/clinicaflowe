@@ -1,0 +1,95 @@
+﻿.ticket {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  background: #fffdf9;
+  border: 1px solid var(--cx-line);
+  border-radius: 18px;
+  box-shadow: var(--cx-shadow);
+  margin-bottom: 1.6rem;
+  overflow: hidden;
+}
+
+.corpo { padding: 1.6rem 1.8rem; }
+
+.eyebrow {
+  font-size: 0.78rem;
+  color: var(--cx-ocre, #c98a3e);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.linha { margin: 0.5rem 0 0.9rem; }
+
+.dataGrande {
+  font-family: "Georgia", "Source Serif 4", serif;
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--cx-teal-900);
+  margin-right: 0.6rem;
+}
+
+.hora {
+  font-size: 1.2rem;
+  color: var(--cx-muted);
+}
+
+.medico {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cx-ink);
+  margin: 0 0 0.2rem;
+}
+
+.especialidade {
+  font-size: 0.9rem;
+  color: var(--cx-muted);
+  margin: 0;
+}
+
+.picote {
+  border-left: 2px dashed var(--cx-line);
+  position: relative;
+}
+.picote::before, .picote::after {
+  content: "";
+  position: absolute;
+  left: -9px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--cx-bg);
+}
+.picote::before { top: -9px; }
+.picote::after { bottom: -9px; }
+
+.canhoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+}
+
+.vazio {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff, #f2faf9);
+  border: 1px solid #d4e5e5;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 16px 42px rgb(6 48 58 / 7%);
+}
+.vazio::before { content: ""; position: absolute; top: -70px; right: -50px; width: 190px; height: 190px; border: 1px solid rgb(14 143 158 / 12%); border-radius: 50%; box-shadow: 0 0 0 28px rgb(14 143 158 / 4%); }
+.vazioTitulo { position: relative; font-size: 1.3rem; font-weight: 700; color: var(--cx-teal-900); margin: 0 0 0.4rem; }
+.vazioTexto { position: relative; color: var(--cx-muted); margin: 0 0 1.2rem; }
+.vazio a { position: relative; border-radius: 10px; background: #075867; }
+.vazio a:hover { background: #063e4b; }
+
+@media (max-width: 640px) {
+  .ticket { grid-template-columns: 1fr; }
+  .picote { border-left: none; border-top: 2px dashed var(--cx-line); }
+  .picote::before, .picote::after { left: 50%; transform: translateX(-50%); }
+  .picote::before { top: -9px; }
+  .picote::after { bottom: -9px; }
+}

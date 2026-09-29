@@ -1,0 +1,61 @@
+.shell { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; }
+.sidebar {
+  background: linear-gradient(180deg, var(--cx-teal-900), #08414f);
+  color: #cfe6ea; padding: 1.4rem 1rem; display: flex; flex-direction: column; gap: 1.4rem;
+  position: sticky; top: 0; height: 100vh;
+}
+.brand { display: flex; align-items: center; gap: 0.6rem; color: #fff; font-weight: 800; }
+.brandMark { width: 32px; height: 32px; border-radius: 9px; background: rgba(255,255,255,0.16); display: grid; place-items: center; }
+.brandLogo { width: 34px; height: 34px; object-fit: contain; }
+.roleTag {
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+  background: rgba(255,255,255,0.12); padding: 0.25rem 0.6rem; border-radius: 999px; align-self: flex-start;
+}
+.nav { display: grid; gap: 0.25rem; }
+.navLink {
+  padding: 0.6rem 0.75rem; border-radius: 10px; font-size: 0.92rem;
+  color: #cfe6ea; transition: background 0.15s ease, color 0.15s ease;
+}
+.navLink:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.spacer { flex: 1; }
+.userBox { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1rem; font-size: 0.85rem; }
+.userBox strong { display: block; color: #fff; }
+
+.main { display: flex; flex-direction: column; min-width: 0; }
+.topbar {
+  background: #fff; border-bottom: 1px solid var(--cx-line);
+  padding: 1.1rem 1.8rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.topbar h1 { font-size: 1.25rem; margin: 0; color: var(--cx-teal-900); }
+.topbar p { margin: 0; font-size: 0.88rem; color: var(--cx-muted); }
+.content { padding: 1.8rem; }
+
+/* Patient portal: a lighter, appointment-first layout. */
+.paciente { display: block; min-height: 100dvh; background: radial-gradient(circle at 0 0, #e7f8fa 0, transparent 24%), radial-gradient(circle at 100% 0, #fff4df 0, transparent 22%), #f8fbfb; }
+.paciente .sidebar { position: sticky; z-index: 20; top: 0; display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 1.25rem; width: 100%; height: auto; min-height: 78px; padding: 10px max(24px, calc((100% - 1200px) / 2)); border-top: 3px solid #06303a; border-bottom: 1px solid #dce8e8; background: rgb(255 255 255 / 94%); color: #075867; backdrop-filter: blur(12px); }
+.paciente .brand { color: #087b82; font-size: 1.2rem; letter-spacing: -0.03em; }
+.paciente .brandLogo { width: 46px; height: 46px; }
+.paciente .roleTag { order: 2; padding: 0.3rem 0.65rem; background: #eaf7f8; color: #075867; font-size: 0.65rem; }
+.paciente .nav { order: 3; display: flex; justify-content: flex-end; gap: clamp(0.4rem, 1.5vw, 1.2rem); }
+.paciente .navLink { padding: 0.65rem 0.8rem; color: #315f67; font-size: 0.82rem; font-weight: 650; white-space: nowrap; }
+.paciente .navLink:hover { background: #eaf7f8; color: #075867; }
+.paciente .spacer { display: none; }
+.paciente .userBox { order: 4; max-width: 190px; padding: 0 0 0 1rem; border-top: 0; border-left: 1px solid #dce8e8; color: #698086; font-size: 0.7rem; overflow: hidden; }
+.paciente .userBox strong, .paciente .userBox span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.paciente .userBox strong { color: #174852; font-size: 0.78rem; }
+.paciente .main { min-height: calc(100dvh - 78px); }
+.paciente .topbar { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 1.6rem 0 0.8rem; border: 0; background: transparent; }
+.paciente .topbar h1 { color: #063e4b; font-size: 1.15rem; }
+.paciente .topbar p { color: #6a7e83; font-size: 0.8rem; }
+.paciente .topbar button { border-color: #cadbdd; background: #fff; color: #075867; }
+.paciente .content { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 1rem 0 5rem; }
+
+@media (max-width: 900px) {
+  .shell { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; }
+  .paciente .sidebar { position: sticky; display: flex; flex-wrap: wrap; min-height: auto; padding: 10px 16px; }
+  .paciente .roleTag, .paciente .userBox { display: none; }
+  .paciente .nav { order: 5; justify-content: flex-start; width: 100%; overflow-x: auto; }
+  .paciente .navLink { flex: 0 0 auto; }
+  .paciente .topbar, .paciente .content { width: min(100% - 28px, 680px); }
+}
